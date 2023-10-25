@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="jump3rlogo.png">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jump3r Games</title>
+	<style>
+	  
+	  .title {
+	    font-family: Arial;
+		font-weight: bold;
+		font-size: 30px;
+	  }
+	  
+	  .subtitle {
+	    font-family: Arial;
+		font-size: 20px;
+	  }
+	  
+	  .game {
+	    height: 300px;
+		width: 400px;
+		border-radius: 15px;
+	  }
+	  
+	  .playbtn {
+	    width: 200px;
+		height: 60px;
+		border-radius: 15px;
+		background-color: green;
+		color: white;
+		font-size: 25px;
+		margin-left: 100px;
+		cursor: pointer;
+		transition: opacity 0.15s;
+	  }
+	  
+	  .playbtn:hover {
+	    opacity: 0.7;
+	  }
+	  
+	  .playbtn:active {
+	    opacity: 0.5;
+	  }
+	  
+	  .gmtitle {
+	    font-family: Arial;
+		font-weight: bold;
+		font-size: 30px;
+		margin-left: 100px;
+	  }
+	  
+	  .darkmodebtn {
+	    background-color: rgb(74, 74, 74);
+		color: white;
+		width: 170px;
+		height: 60px;
+		border-radius: 15px;
+		font-size: 18px;
+		cursor: pointer;
+		transition: opacity 0.15s;
+		margin-left: 1050px;
+	  }
+	  	  
+	  .darkmodebtn:hover {
+	    opacity: 0.7;
+	  }
+	  
+	  body {
+	    background-color: white;
+		color: black;
+	  }
+	  
+	  body.dark-mode {
+	    background-color: rgb(31, 31, 31);
+		color: white;
+	  }
+	  
+	  .copyright {
+	    margin-top: 100px;
+	  }
+	  
+	  .media {
+	    font-family: Arial;
+		font-weight: bold;
+		font-size: 30px;
+	  }
+	  
+	  .yt {
+	    background-color: red;
+		color: white;
+		border-radius: 10px;
+		width: 110px;
+		height: 45px;
+		font-size: 20px;
+		font-weight: bold;
+		transition: opacity 0.15s;
+		margin-left: 400px;
+	  }
+	  
+	  .yt:hover {
+	    opacity: 0.7;
+		cursor: pointer;
+	  }
+	  
+	  .tt {
+	    background-color: black;
+		color: white;
+		border-radius: 10px;
+		width: 250px;
+		height: 45px;
+		font-size: 15px;
+		font-weight: bold;
+		transition: opacity 0.15s;
+		margin-left: 80px;
+	  }
+	  
+	</style>
+  </head>
+  
+  <body>
+    <h1 class="title" align="center">Jump3r Games</h1>
+	<h3 class="subtitle" align="center">The Official gaming site by Jump3rGames/Jumper123</h3>
+	<header>
+	<button class="darkmodebtn" id="dark-mode-toggle">Toggle Dark mode</button>
+	</header>
+	<div>
+	<p class="gmtitle">Smiley Clicker</p>
+	<img class="game" src="s_c_bra.png"></img>
+	</div>
+	<div>
+	<button class="playbtn" onclick="window.location.href='smileyclicker.html';">Play</button>
+	</div>
+	<div>
+	<p class="gmtitle">Poop Clicker</p>
+	<img class="game" src="p_c_bra.png"></img>
+	</div>
+	<div>
+	<button class="playbtn" onclick="window.location.href='Poop Clicker.html';">Play</button>
+	</div>
+	<div>
+	<p class="gmtitle">Harvest Master</p>
+	<img class="game" src="h_m_bra.png"></img>
+	</div>
+	<div>
+	<button class="playbtn" onclick="window.location.href='Harvest Master.html';">Play</button>
+	</div>
+	<div>
+	<p class="gmtitle">Flappy Cube</p>
+	<img class="game" src="f_c_bra.png"></img>
+	</div>
+	<div>
+	<button class="playbtn" onclick="window.location.href='Flappy Cube.html';">Play</button>
+	</div>
+	<div>
+	<p class="media" align="center">You can follow me on social media</p>
+	</div>
+	<button class="yt" onclick="window.location.href='https://www.youtube.com/channel/UCBLcnU0vfMtSCp1tsdEmteg';">Youtube</button>
+	<button class="tt">Tiktok(Currently Unavailable)</button>
+	<p class="copyright" align="center">Jump3r Games © 2023</p>
+	<script>
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Check the user's preference in local storage (if available)
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Update the user's preference in local storage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+</script>
+	
+  </body>
+  
+</html>
