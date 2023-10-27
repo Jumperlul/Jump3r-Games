@@ -172,6 +172,22 @@
 		grid-template-rows: 200px 200px 200px;
 		margin-left: 80px;
 	}
+
+	.feedback {
+		background-color: blue;
+		color: white;
+		border-radius: 10px;
+		width: 200px;
+		height: 45px;
+		font-size: 20px;
+		margin-left: 400px;
+		transition: opacity 0.15s;
+	}
+
+	.feedback:hover {
+		opacity: 0.7
+		cursor: pointer;
+	}
 		
 	</style>
   </head>
@@ -266,6 +282,12 @@
 	</div>
 	<button class="yt" onclick="window.location.href='https://www.youtube.com/channel/UCBLcnU0vfMtSCp1tsdEmteg';">Youtube</button>
 	<button class="tt" onclick="window.location.href='https://www.tiktok.com/@jump3rgames3'">Tiktok</button>
+
+        <div>
+	<p class="media" align="center">Leave feedback</p>
+	</div>
+	<button class="feedback" onclick="window.location.href='https://mail.google.com/mail/u/0/?ogbl#inbox?compose=DmwnWstpsqrSGxdwjQjjlKpLfHtmLpKJtQHjrmlLbCJPvFMkxrfxRGwxQSmsKFNnRZQqfsPdjgXV'">Feedback via Gmail</button>
+	
 	<p class="copyright" align="center">Jump3r Games © 2023</p>
 	<script>
     const darkModeToggle = document.getElementById('dark-mode-toggle');
